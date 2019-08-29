@@ -1,9 +1,19 @@
-# Benthos benchmarks with cassandra input
+# Benthos cassandra output
 
-Sandbox to test cassandra output type for benthos
+Important note: this won't work with regular benthos release yet. Cassandra output is under development and unpublished.
 
-Note that:
+## Usage
 
-- while this is public it may be not that useful; basically it is just kind of sandbox to play with benthos and cassandra together
-- cassandra output is not yet published anywhere (WIP on me)
-- scripts assume that benthos source is available in some specific place; adjust it if needed
+Ensure that `common.sh` has proper path to where benthos sources are.
+
+To build/rebuild benthos from sources:
+
+```sh
+./build.sh <clean|all>
+```
+
+To run example:
+
+```sh
+./run.sh
+```
