@@ -1,3 +1,3 @@
 #!/bin/bash
 
-BENTHOS_HOME=../../Jeffail/benthos
+BENTHOS_HOME=../../../Jeffail/benthos

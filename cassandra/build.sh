@@ -2,5 +2,5 @@
 
 source common.sh
 
-make -C ../../Jeffail/benthos $1
+make -C $BENTHOS_HOME $1
 
