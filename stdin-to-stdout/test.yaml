@@ -1,0 +1,21 @@
+input:
+  type: stdin
+  stdin:
+    path: "input.txt"
+    delimiter: "\n"
+    multipart: true
+  processors:
+    - type: for_each
+      for_each:
+        - type: text
+          text:
+            operator: quote
+output:
+  type: stdout
+metrics:
+  type: prometheus
+  prefix: benthos
+  prometheus:
+    push_interval: 10s 
+    push_job_name: benthos_ex2
+    push_url: "http://localhost:9091"
