@@ -16,7 +16,7 @@ services:
     depends_on:
      - prom
   exporter:
-    image: prom/node-exporter:v.0.18.1
+    image: prom/node-exporter:v0.18.1
     ports:
      - "9100:9100"
   grafana:
