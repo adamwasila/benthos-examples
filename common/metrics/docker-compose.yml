@@ -1,7 +1,7 @@
 version: "3"
 services:
   prom:
-    image: prom/prometheus:v2.12.0
+    image: prom/prometheus:v2.17.1
     volumes:
      - ./monitor/prometheus.yml:/etc/prometheus/prometheus.yml
     command: "--config.file=/etc/prometheus/prometheus.yml --storage.tsdb.path=/prometheus"
@@ -10,17 +10,17 @@ services:
     depends_on:
      - exporter
   pushgateway:
-    image: prom/pushgateway:v0.9.1
+    image: prom/pushgateway:v1.2.0
     ports:
      - 9091:9091
     depends_on:
      - prom
   exporter:
-    image: prom/node-exporter:v0.18.1
+    image: prom/node-exporter:v1.0.0-rc.0
     ports:
      - "9100:9100"
   grafana:
-    image: grafana/grafana:6.3.3
+    image: grafana/grafana:6.7.1
     ports:
      - "3000:3000"
     depends_on:
